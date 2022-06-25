@@ -47,10 +47,19 @@ pos.addEventListener("mousemove", function (e) {
 });
 
 // ========================== main black is none at load =================================
+function beforeMouseMove() {
+  let mb = select(".main-black");
+  mb.style.display = "none";
+  document.addEventListener("mousemove", function () {
+    mb.style.display = "block";
+  });
+}
+
 window.addEventListener("load", function () {
   let mb = select(".main-black");
   mb.style.display = "none";
   this.setTimeout(() => {
     mb.style.display = "block";
+    beforeMouseMove();
   }, 500);
 });
