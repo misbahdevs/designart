@@ -29,6 +29,11 @@
   <link rel="stylesheet" href="assets/css/main.css" />
 
   <body id="home">
+    <div id="loader">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
     <!-- ============================ sesion black header ============================== -->
     <div class="header-black">
       <!-- ============================ header event ============================== -->
@@ -46,7 +51,7 @@
           <div class="box__lists">
             <ul class="lists">
               <li class="lists__items">
-                <a href="#home" class="list__item">Ho<span>me</span></a>
+                <a href="#hero-content" class="list__item">Ho<span>me</span></a>
               </li>
               <li class="lists__items">
                 <a href="#portfolio" class="list__item"
@@ -82,7 +87,7 @@
           <div class="box__lists">
             <ul class="lists">
               <li class="lists__items">
-                <a href="#home" class="list__item">Ho<span>me</span></a>
+                <a href="#hero-content" class="list__item">Ho<span>me</span></a>
               </li>
               <li class="lists__items">
                 <a href="#portfolio" class="list__item"
@@ -131,52 +136,20 @@
       </header>
 
       <!-- ============================ hero-content ============================== -->
-      <section class="hero__content container container-md">
+      <section class="hero__content container container-md" id="hero-content">
         <div class="container__hero-content">
-          <span
-            class="years"
-            data-aos="fade-up-right"
-            data-aos-offset="200"
-            data-aos-delay="50"
-            data-aos-duration="1300"
-            data-aos-easing="ease-in-out"
-            data-aos-mirror="true"
-            >2022</span
-          >
-          <h1
-            data-aos="fade-up"
-            data-aos-offset="200"
-            data-aos-delay="50"
-            data-aos-duration="1400"
-            data-aos-easing="ease-in-out"
-            data-aos-mirror="true"
-          >
+          <span class="years" data-aos="fade-up-right">2022</span>
+          <h1 data-aos="fade-up">
             THE ART<br /><span>OF DESIGN</span><br />INTERIOR
             <span class="copy">&copy;</span>
           </h1>
           <div>
             <div class="toggle__scroll">
-              <a
-                href="#portfolio"
-                class="text__scroll"
-                data-aos="fade-up"
-                data-aos-offset="200"
-                data-aos-delay="50"
-                data-aos-duration="1000"
-                data-aos-easing="ease-in-out"
-                data-aos-mirror="true"
+              <a href="#portfolio" class="text__scroll" data-aos="fade-up"
                 >SCROLL</a
               >
             </div>
-            <div
-              class="image__hero-content"
-              data-aos="fade-up"
-              data-aos-offset="200"
-              data-aos-delay="50"
-              data-aos-duration="1500"
-              data-aos-easing="ease-in-out"
-              data-aos-mirror="true"
-            >
+            <div class="image__hero-content" data-aos="fade-up">
               <img
                 src="assets/img/img-hero.png"
                 alt=""
@@ -184,15 +157,7 @@
               />
             </div>
             <div class="about__hero-content">
-              <div
-                class="box__about"
-                data-aos="fade-up"
-                data-aos-offset="200"
-                data-aos-delay="50"
-                data-aos-duration="1000"
-                data-aos-easing="ease-in-out"
-                data-aos-mirror="true"
-              >
+              <div class="box__about" data-aos="fade-up">
                 <span class="line"></span>
                 <span class="text__about-hero-content">FELIX WIBOWO</span>
               </div>
@@ -205,37 +170,11 @@
       <section class="portfolio container container-md" id="portfolio">
         <div class="container__portfolio">
           <div class="title__portfolio">
-            <h1
-              data-aos="fade-up"
-              data-aos-offset="200"
-              data-aos-delay="50"
-              data-aos-duration="1600"
-              data-aos-easing="ease-in-out"
-              data-aos-mirror="true"
-            >
-              MY
-            </h1>
-            <h1
-              data-aos="fade-up"
-              data-aos-offset="200"
-              data-aos-delay="50"
-              data-aos-duration="1800"
-              data-aos-easing="ease-in-out"
-              data-aos-mirror="true"
-            >
-              Works
-            </h1>
+            <h1 data-aos="fade-up">MY</h1>
+            <h1 data-aos="fade-up">Works</h1>
           </div>
           <div class="showup__project1">
-            <div
-              class="box__showup"
-              data-aos="fade-up"
-              data-aos-offset="200"
-              data-aos-delay="50"
-              data-aos-duration="2100"
-              data-aos-easing="ease-in-out"
-              data-aos-mirror="true"
-            >
+            <div class="box__showup" data-aos="fade-up">
               <div class="image__showup">
                 <img
                   src="assets/img/portfolio/portfolio-1.png"
@@ -249,31 +188,25 @@
               </div>
             </div>
 
-            <div class="box__showup2" data-aos="fade-up-left">
-              <div class="image__showup2">
-                <img
-                  src="assets/img/portfolio/portfolio-2.png"
-                  alt="portfolio 1"
-                  class="img__showup2"
-                />
-              </div>
-              <div class="about__showup2">
-                <h3 class="title">Felix Wibowo</h3>
-                <span class="description">Family Room Design in 2022</span>
+            <div data-aos="fade-up" style="z-index: 75">
+              <div class="box__showup2">
+                <div class="image__showup2">
+                  <img
+                    src="assets/img/portfolio/portfolio-2.png"
+                    alt="portfolio 1"
+                    class="img__showup2"
+                  />
+                </div>
+                <div class="about__showup2">
+                  <h3 class="title">Felix Wibowo</h3>
+                  <span class="description">Family Room Design in 2022</span>
+                </div>
               </div>
             </div>
           </div>
 
           <div class="showup__project2">
-            <div
-              class="box__showup"
-              data-aos="fade-up"
-              data-aos-offset="200"
-              data-aos-delay="50"
-              data-aos-duration="2200"
-              data-aos-easing="ease-in-out"
-              data-aos-mirror="true"
-            >
+            <div class="box__showup" data-aos="fade-up">
               <div class="image__showup">
                 <img
                   src="assets/img/portfolio/portfolio-3.png"
@@ -287,25 +220,19 @@
               </div>
             </div>
 
-            <div
-              class="box__showup2"
-              data-aos="fade-up"
-              data-aos-offset="200"
-              data-aos-delay="50"
-              data-aos-duration="2400"
-              data-aos-easing="ease-in-out"
-              data-aos-mirror="true"
-            >
-              <div class="image__showup2">
-                <img
-                  src="assets/img/portfolio/portfolio-4.png"
-                  alt="portfolio 3"
-                  class="img__showup2"
-                />
-              </div>
-              <div class="about__showup2">
-                <h3 class="title">Felix Wibowo</h3>
-                <span class="description">Family Room Design in 2022</span>
+            <div data-aos="fade-up" style="display: 75">
+              <div class="box__showup2">
+                <div class="image__showup2">
+                  <img
+                    src="assets/img/portfolio/portfolio-4.png"
+                    alt="portfolio 3"
+                    class="img__showup2"
+                  />
+                </div>
+                <div class="about__showup2">
+                  <h3 class="title">Felix Wibowo</h3>
+                  <span class="description">Family Room Design in 2022</span>
+                </div>
               </div>
             </div>
           </div>
@@ -343,52 +270,20 @@
       </header>
 
       <!-- ============================ hero-content ============================== -->
-      <section class="hero__content container container-md">
+      <section class="hero__content container container-md" id="hero-content">
         <div class="container__hero-content">
-          <span
-            class="years"
-            data-aos="fade-up-right"
-            data-aos-offset="200"
-            data-aos-delay="50"
-            data-aos-duration="1300"
-            data-aos-easing="ease-in-out"
-            data-aos-mirror="true"
-            >2022</span
-          >
-          <h1
-            data-aos="fade-up"
-            data-aos-offset="200"
-            data-aos-delay="50"
-            data-aos-duration="1400"
-            data-aos-easing="ease-in-out"
-            data-aos-mirror="true"
-          >
+          <span class="years" data-aos="fade-up-right">2022</span>
+          <h1 data-aos="fade-up">
             THE ART<br /><span>OF DESIGN</span><br />INTERIOR
             <span class="copy">&copy;</span>
           </h1>
           <div>
             <div class="toggle__scroll">
-              <a
-                href="#portfolio"
-                class="text__scroll"
-                data-aos="fade-up"
-                data-aos-offset="200"
-                data-aos-delay="50"
-                data-aos-duration="1000"
-                data-aos-easing="ease-in-out"
-                data-aos-mirror="true"
+              <a href="#portfolio" class="text__scroll" data-aos="fade-up"
                 >SCROLL</a
               >
             </div>
-            <div
-              class="image__hero-content"
-              data-aos="fade-up"
-              data-aos-offset="200"
-              data-aos-delay="50"
-              data-aos-duration="1500"
-              data-aos-easing="ease-in-out"
-              data-aos-mirror="true"
-            >
+            <div class="image__hero-content" data-aos="fade-up">
               <img
                 src="assets/img/img-hero.png"
                 alt=""
@@ -396,15 +291,7 @@
               />
             </div>
             <div class="about__hero-content">
-              <div
-                class="box__about"
-                data-aos="fade-up"
-                data-aos-offset="200"
-                data-aos-delay="50"
-                data-aos-duration="1000"
-                data-aos-easing="ease-in-out"
-                data-aos-mirror="true"
-              >
+              <div class="box__about" data-aos="fade-up">
                 <span class="line"></span>
                 <span class="text__about-hero-content">FELIX WIBOWO</span>
               </div>
@@ -417,37 +304,11 @@
       <section class="portfolio container container-md" id="portfolio">
         <div class="container__portfolio">
           <div class="title__portfolio">
-            <h1
-              data-aos="fade-up"
-              data-aos-offset="200"
-              data-aos-delay="50"
-              data-aos-duration="1600"
-              data-aos-easing="ease-in-out"
-              data-aos-mirror="true"
-            >
-              MY
-            </h1>
-            <h1
-              data-aos="fade-up"
-              data-aos-offset="200"
-              data-aos-delay="50"
-              data-aos-duration="1800"
-              data-aos-easing="ease-in-out"
-              data-aos-mirror="true"
-            >
-              Works
-            </h1>
+            <h1 data-aos="fade-up">MY</h1>
+            <h1 data-aos="fade-up">Works</h1>
           </div>
           <div class="showup__project1">
-            <div
-              class="box__showup"
-              data-aos="fade-up"
-              data-aos-offset="200"
-              data-aos-delay="50"
-              data-aos-duration="2100"
-              data-aos-easing="ease-in-out"
-              data-aos-mirror="true"
-            >
+            <div class="box__showup" data-aos="fade-up">
               <div class="image__showup">
                 <img
                   src="assets/img/portfolio/portfolio-1.png"
@@ -461,39 +322,25 @@
               </div>
             </div>
 
-            <div
-              class="box__showup2"
-              data-aos="fade-up-left"
-              data-aos-offset="200"
-              data-aos-delay="50"
-              data-aos-duration="2400"
-              data-aos-easing="ease-in-out"
-              data-aos-mirror="true"
-            >
-              <div class="image__showup2">
-                <img
-                  src="assets/img/portfolio/portfolio-2.png"
-                  alt="portfolio 1"
-                  class="img__showup2"
-                />
-              </div>
-              <div class="about__showup2">
-                <h3 class="title">Felix Wibowo</h3>
-                <span class="description">Family Room Design in 2022</span>
+            <div data-aos="fade-up" style="z-index: 75">
+              <div class="box__showup2">
+                <div class="image__showup2">
+                  <img
+                    src="assets/img/portfolio/portfolio-2.png"
+                    alt="portfolio 1"
+                    class="img__showup2"
+                  />
+                </div>
+                <div class="about__showup2">
+                  <h3 class="title">Felix Wibowo</h3>
+                  <span class="description">Family Room Design in 2022</span>
+                </div>
               </div>
             </div>
           </div>
 
           <div class="showup__project2">
-            <div
-              class="box__showup"
-              data-aos="fade-up"
-              data-aos-offset="200"
-              data-aos-delay="50"
-              data-aos-duration="2200"
-              data-aos-easing="ease-in-out"
-              data-aos-mirror="true"
-            >
+            <div class="box__showup" data-aos="fade-up">
               <div class="image__showup">
                 <img
                   src="assets/img/portfolio/portfolio-3.png"
@@ -507,31 +354,31 @@
               </div>
             </div>
 
-            <div
-              class="box__showup2"
-              data-aos="fade-up"
-              data-aos-offset="200"
-              data-aos-delay="50"
-              data-aos-duration="2400"
-              data-aos-easing="ease-in-out"
-              data-aos-mirror="true"
-            >
-              <div class="image__showup2">
-                <img
-                  src="assets/img/portfolio/portfolio-4.png"
-                  alt="portfolio 3"
-                  class="img__showup2"
-                />
-              </div>
-              <div class="about__showup2">
-                <h3 class="title">Felix Wibowo</h3>
-                <span class="description">Family Room Design in 2022</span>
+            <div data-aos="fade-up">
+              <div class="box__showup2">
+                <div class="image__showup2">
+                  <img
+                    src="assets/img/portfolio/portfolio-4.png"
+                    alt="portfolio 3"
+                    class="img__showup2"
+                  />
+                </div>
+                <div class="about__showup2">
+                  <h3 class="title">Felix Wibowo</h3>
+                  <span class="description">Family Room Design in 2022</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
     </div>
+
+    <!-- ============================ gsap script ============================== -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
+      defer
+    ></script>
 
     <!-- ============================ aos script ============================== -->
     <script src="assets/vendor/aos/aos.js"></script>
@@ -546,6 +393,6 @@
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- ============================ main script ============================== -->
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js" defer></script>
   </body>
 </html>

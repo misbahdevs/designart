@@ -63,6 +63,16 @@
       },
       true
     );
+    on(
+      "click",
+      ".list__item",
+      function () {
+        navbarEvent.forEach((nv) => {
+          nv.classList.remove("active");
+        });
+      },
+      true
+    );
   };
   on("click", ".toggle", navActive);
 
@@ -94,17 +104,56 @@
     }, 500);
   });
 
+  // =========================== loader animation =============================
+  onload(window, () => {
+    let loader = select("#loader");
+    setTimeout(() => {
+      loader.style.display = "none";
+    }, 3000);
+  });
+
   // =========================== session active =============================
-  const togleTog = select(".toglle__tog", true);
+  const togleTogActive = () => {
+    let togleTog = select(".toglle__tog", true);
+    let navbarLinks = select(".list__item", true);
+    let position = window.scrollY + 200;
+    navbarLinks.forEach((navbarLink) => {
+      if (!navbarLink.hash) return;
+      let section = select(navbarLink.hash);
+      if (!section) return;
+      if (
+        position >= section.offsetTop &&
+        position <= section.offsetTop + section.offsetHeight
+      ) {
+        if (section.classList.contains("hero__content")) {
+          togleTog[0].innerHTML = "HOME";
+          togleTog[1].innerHTML = "HOME";
+        } else if (section.classList.contains("portfolio")) {
+          togleTog[0].innerHTML = "PORTFOLIO";
+          togleTog[1].innerHTML = "PORTFOLIO";
+        } else if (section.classList.contains("about")) {
+          togleTog[0].innerHTML = "ABOUT";
+          togleTog[1].innerHTML = "ABOUT";
+        } else if (section.classList.contains("contact")) {
+          togleTog[0].innerHTML = "CONTACT";
+          togleTog[1].innerHTML = "CONTACT";
+        }
+      }
+    });
+  };
+  onload(window, togleTogActive);
+  onscroll(document, togleTogActive);
 
   // ========================= setting aos ===========================
   const aos_init = () => {
-    AOS.init({
-      duration: 1000,
-      easing: "ease-in-out",
-      once: true,
-      mirror: false,
-    });
+    setTimeout(() => {
+      AOS.init({
+        duration: 1000,
+        easing: "ease-in-out",
+        // once: true,
+        mirror: false,
+      });
+    }, 3000);
   };
   onload(window, aos_init);
 })();
