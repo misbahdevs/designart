@@ -156,4 +156,9 @@
     }, 3000);
   };
   onload(window, aos_init);
+
+  // ======================== jarallax setting =======================
+  jarallax(document.querySelectorAll(".jarallax"), {
+    speed: 0.2,
+  });
 })();
