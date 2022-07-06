@@ -253,7 +253,7 @@ div.header-white {
   position: absolute;
   z-index: 110;
   clip-path: circle(60px at var(--x) var(--y));
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
 /* ============================ header black ============================= */
@@ -419,7 +419,7 @@ div.main-black {
   background-color: #000;
 
   clip-path: circle(60px at var(--x) var(--y));
-  transition: 0.3s;
+  transition: 0.2s;
 }
 div.main-white {
   position: absolute;
