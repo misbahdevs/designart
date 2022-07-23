@@ -1,6 +1,9 @@
 /* ============================ google fonts ============================== */
 @import url("https://fonts.googleapis.com/css2?family=Cinzel&family=Inter&display=swap");
-
+@font-face {
+  font-family: "New york";
+  src: url(../font/NewYork\ PERSONAL\ USE.otf);
+}
 /* ============================ variabel css ============================== */
 :root {
   /* ============================ color ============================== */
@@ -21,7 +24,7 @@
 
   /* ============================ typograpy ============================== */
   --body-font: "Inter", sans-serif;
-  --body-font2: "Cinzel", serif;
+  --body-font2: "New york", serif;
 
   /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
   --big-font-size: 2rem;
@@ -146,11 +149,11 @@ div.main-black header {
   position: fixed;
   z-index: 99;
   background-color: #000;
-  transition: 0.2s;
+  transition: 0.5s;
 }
 div.main-black header.sticky {
   height: 6rem;
-  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.2);
 }
 div.main-black header .container {
   width: 100%;
@@ -166,6 +169,9 @@ div.main-black header .navbar {
 div.main-black header .navbar .logo {
   font-size: var(--h1-font-size);
   color: #fff;
+}
+div.main-black header .navbar .logo img {
+  width: 80px;
 }
 div.main-black header .navbar .toggle {
   width: 50px;
@@ -203,7 +209,7 @@ div.main-white header {
 }
 div.main-white header.sticky {
   height: 6rem;
-  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
 }
 div.main-white header .container {
   width: 100%;
@@ -219,6 +225,9 @@ div.main-white header .navbar {
 div.main-white header .navbar .logo {
   font-size: var(--h1-font-size);
   color: #000;
+}
+div.main-white header .navbar .logo img {
+  width: 80px;
 }
 div.main-white header .navbar .toggle {
   width: 50px;
@@ -253,7 +262,7 @@ div.header-white {
   position: absolute;
   z-index: 110;
   clip-path: circle(60px at var(--x) var(--y));
-  transition: 0.2s;
+  transition: 0.1s;
 }
 
 /* ============================ header black ============================= */
@@ -283,6 +292,9 @@ div.header-black .navbar__event .container .navbar {
 div.header-black .navbar__event .container .navbar .logo {
   font-size: var(--h1-font-size);
   color: #fff;
+}
+div.header-black .navbar__event .container .navbar .logo img {
+  width: 80px;
 }
 div.header-black .navbar__event .container .navbar .toggle__icon {
   width: 50px;
@@ -359,7 +371,10 @@ div.header-white .navbar__event .container .navbar {
 }
 div.header-white .navbar__event .container .navbar .logo {
   font-size: var(--h1-font-size);
-  color: #000;
+  color: #fff;
+}
+div.header-white .navbar__event .container .navbar .logo img {
+  width: 80px;
 }
 div.header-white .navbar__event .container .navbar .toggle__icon {
   width: 50px;
@@ -419,7 +434,7 @@ div.main-black {
   background-color: #000;
 
   clip-path: circle(60px at var(--x) var(--y));
-  transition: 0.2s;
+  transition: 0.1s;
 }
 div.main-white {
   position: absolute;
@@ -429,6 +444,9 @@ div.main-white {
 }
 
 /* ============================ main black hero-content ============================== */
+div.main-black section.hero__content {
+  margin-bottom: 200px;
+}
 div.main-black section.hero__content .container__hero-content {
   width: 100%;
   display: flex;
@@ -458,7 +476,8 @@ div.main-black section.hero__content .container__hero-content h1 span {
 div.main-black section.hero__content .container__hero-content h1 span.copy {
   font-size: 22px;
   position: absolute;
-  top: 215px;
+  top: 208px;
+  font-family: var(--body-font);
 }
 div.main-black section.hero__content .container__hero-content div {
   width: 100%;
@@ -473,7 +492,7 @@ div.main-black
   div
   .toggle__scroll {
   font-size: var(--normal-font-size);
-  color: #fff;
+  width: 37%;
 }
 div.main-black
   section.hero__content
@@ -484,7 +503,7 @@ div.main-black
   color: #fff;
   cursor: pointer;
   position: absolute;
-  bottom: 15px;
+  bottom: 230px;
   font-size: var(--h2-font-size);
 }
 div.main-black
@@ -492,10 +511,10 @@ div.main-black
   .container__hero-content
   div
   .image__hero-content {
-  width: 60%;
-  height: 420px;
-  background-color: var(--first-color);
+  width: 20%;
+  height: 500px;
   overflow: hidden;
+  margin-top: 80px;
 }
 div.main-black
   section.hero__content
@@ -512,6 +531,12 @@ div.main-black
   .about__hero-content {
   position: relative;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  box-sizing: border-box;
+  width: 37%;
+  margin-top: -120px;
 }
 div.main-black
   section.hero__content
@@ -519,11 +544,9 @@ div.main-black
   div
   .about__hero-content
   .box__about {
-  position: absolute;
-  bottom: 15px;
   display: flex;
-  height: 20px;
-  width: 200px;
+  justify-content: left;
+  margin-bottom: var(--mb-0-5);
 }
 div.main-black
   section.hero__content
@@ -532,9 +555,10 @@ div.main-black
   .about__hero-content
   .line {
   display: inline-block;
-  width: 50px;
+  width: 100px;
   height: 1px;
   background-color: #fff;
+  margin-right: 20px;
 }
 div.main-black
   section.hero__content
@@ -545,8 +569,106 @@ div.main-black
   color: #fff;
   font-size: var(--h2-font-size);
 }
+div.main-black
+  section.hero__content
+  .container__hero-content
+  div
+  .about__hero-content
+  .boxs__about {
+  width: 70%;
+  height: 150px;
+  margin-top: -200px;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: space-between;
+}
+div.main-black
+  section.hero__content
+  .container__hero-content
+  div
+  .about__hero-content
+  .boxs__about
+  .description {
+  color: #fff;
+}
+div.main-black
+  section.hero__content
+  .container__hero-content
+  div
+  .about__hero-content
+  .boxs__about
+  .btn--flex {
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+div.main-black
+  section.hero__content
+  .container__hero-content
+  div
+  .about__hero-content
+  .boxs__about
+  .btn--flex
+  i {
+  color: #595959;
+  font-size: 1.3rem;
+  margin-left: 10px;
+}
+
+/* ================================= brands ======================================== */
+div.main-black section.brands .container__brands {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+div.main-black section.brands .container__brands .about__brands {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+div.main-black section.brands .container__brands .about__brands h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #fff;
+}
+div.main-black section.brands .container__brands .about__brands h1 span {
+  font-family: var(--body-font2);
+  letter-spacing: 0px;
+}
+div.main-black section.brands .container__brands .about__brands .description {
+  color: #fff;
+}
+div.main-black section.brands .container__brands .logo__brands {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+div.main-black section.brands .container__brands .logo__brands .brand {
+  width: 28%;
+  height: 100px;
+  border: 1px solid #595959;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  display: grid;
+  place-items: center;
+}
+div.main-black section.brands .container__brands .logo__brands .brand img {
+  width: 70%;
+}
 
 /* ============================ main white hero-content ============================== */
+div.main-white section.hero__content {
+  margin-bottom: 200px;
+}
 div.main-white section.hero__content .container__hero-content {
   width: 100%;
   display: flex;
@@ -575,7 +697,8 @@ div.main-white section.hero__content .container__hero-content h1 span {
 div.main-white section.hero__content .container__hero-content h1 span.copy {
   font-size: 22px;
   position: absolute;
-  top: 215px;
+  top: 208px;
+  font-family: var(--body-font);
 }
 div.main-white section.hero__content .container__hero-content div {
   width: 100%;
@@ -590,6 +713,7 @@ div.main-white
   div
   .toggle__scroll {
   font-size: var(--normal-font-size);
+  width: 37%;
 }
 div.main-white
   section.hero__content
@@ -600,7 +724,7 @@ div.main-white
   color: #000;
   cursor: pointer;
   position: absolute;
-  bottom: 15px;
+  bottom: 230px;
   font-size: var(--h2-font-size);
 }
 div.main-white
@@ -608,10 +732,10 @@ div.main-white
   .container__hero-content
   div
   .image__hero-content {
-  width: 60%;
-  height: 420px;
-  background-color: var(--first-color);
+  width: 20%;
+  height: 500px;
   overflow: hidden;
+  margin-top: 80px;
 }
 div.main-white
   section.hero__content
@@ -628,6 +752,12 @@ div.main-white
   .about__hero-content {
   position: relative;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  box-sizing: border-box;
+  width: 37%;
+  margin-top: -120px;
 }
 div.main-white
   section.hero__content
@@ -635,11 +765,9 @@ div.main-white
   div
   .about__hero-content
   .box__about {
-  position: absolute;
-  bottom: 15px;
   display: flex;
-  height: 20px;
-  width: 200px;
+  justify-content: left;
+  margin-bottom: var(--mb-0-5);
 }
 div.main-white
   section.hero__content
@@ -648,9 +776,10 @@ div.main-white
   .about__hero-content
   .line {
   display: inline-block;
-  width: 50px;
+  width: 100px;
   height: 1px;
   background-color: #000;
+  margin-right: 20px;
 }
 div.main-white
   section.hero__content
@@ -660,6 +789,106 @@ div.main-white
   .text__about-hero-content {
   color: #000;
   font-size: var(--h2-font-size);
+}
+div.main-white
+  section.hero__content
+  .container__hero-content
+  div
+  .about__hero-content
+  .boxs__about {
+  width: 70%;
+  height: 150px;
+  margin-top: -200px;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: space-between;
+}
+div.main-white
+  section.hero__content
+  .container__hero-content
+  div
+  .about__hero-content
+  .boxs__about
+  .description {
+  color: #000;
+}
+div.main-white
+  section.hero__content
+  .container__hero-content
+  div
+  .about__hero-content
+  .boxs__about
+  .btn--flex {
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+div.main-white
+  section.hero__content
+  .container__hero-content
+  div
+  .about__hero-content
+  .boxs__about
+  .btn--flex
+  i {
+  color: #595959;
+  font-size: 1.3rem;
+  margin-left: 10px;
+}
+
+/* ================================= brands ======================================== */
+div.main-white section.brands .container__brands {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+div.main-white section.brands .container__brands .about__brands {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+div.main-white section.brands .container__brands .about__brands h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 60px;
+}
+div.main-white section.brands .container__brands .about__brands h1 span {
+  font-family: var(--body-font2);
+  letter-spacing: 0px;
+}
+div.main-white section.brands .container__brands .about__brands .description {
+  color: #000;
+}
+div.main-white section.brands .container__brands .logo__brands {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+div.main-white section.brands .container__brands .logo__brands .brand {
+  width: 28%;
+  height: 100px;
+  border: 1px solid #595959;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  display: grid;
+  place-items: center;
+}
+div.main-white section.brands .container__brands .logo__brands .brand img {
+  width: 70%;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
 }
 
 /* ================================= main black portfolio ================================ */

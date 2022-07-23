@@ -32,7 +32,7 @@
   // ============================ when stycky header active ==============================
   const stickyHeaderActive = () => {
     let header = select("header", true);
-    header.forEach((h) => h.classList.toggle("sticky", window.scrollY > 0));
+    header.forEach((h) => h.classList.toggle("sticky", window.scrollY > 30));
   };
   onscroll(window, stickyHeaderActive);
 
